@@ -19,6 +19,41 @@
 
 ---
 
+## 🧠 Intuition
+
+Traditional multi-factor models usually assume that factor weights are static.
+
+For example:
+
+- momentum always matters equally
+- reversal always contributes the same amount
+- institutional flow always has stable predictive power
+
+But real markets do not behave that way.
+
+In practice, factor efficacy changes across regimes:
+
+- momentum dominates during trending markets
+- reversal becomes stronger during liquidity shocks
+- institutional flow matters more during periods of information asymmetry
+
+A fixed linear combination cannot adapt to these shifts.
+
+This project starts from a simple idea:
+
+> instead of manually assigning factor weights,  
+> let the model learn when each factor matters most.
+
+LightGBM is used not as a black-box prediction engine,  
+but as an adaptive weighting mechanism capable of learning:
+
+- non-linear interactions
+- regime-dependent relationships
+- time-varying factor importance
+
+The goal is therefore not to replace factor investing,  
+but to make factor combination more adaptive to changing market structure.
+
 ## 📋 Overview
 
 **Multi-Factor Model** applies **LightGBM gradient boosting** to dynamically combine three behavioral and microstructure factors for stock selection in the CSI 300 universe:
@@ -208,6 +243,24 @@ The Sharpe of ~1.0 with 12.5% annualized return and controlled drawdown (−4.7%
 
 ---
 
+## 💼 Application Value
+
+This framework is best viewed as an **adaptive factor combination system** rather than a standalone prediction model.
+
+Potential applications include:
+
+- **Dynamic factor allocation**  
+  Adjusting exposure as factor efficacy changes across market regimes.
+
+- **Signal conditioning**  
+  Improving traditional factors by learning non-linear interactions and context dependence.
+
+- **Research on market structure**  
+  Exploring how momentum, reversal, and institutional flow behave under different liquidity and sentiment environments.
+
+More broadly, the project illustrates how machine learning can be used to model  
+**time-varying relationships in factor investing**, rather than simply maximizing predictive accuracy.
+
 ## 🗂 Project Structure
 
 ```
@@ -304,7 +357,6 @@ Requires Python 3.9+ and `lightgbm` (for training) or falls back to heuristic we
 
 - **SDL Factor**: ([sdl-factor-demo](https://github.com/)) — Information asymmetry alpha
 - **ND Factor**: ([nd-factor-demo](https://github.com/)) — Narrative dispersion risk indicator
-- **Retail Behavior Alpha**: — Dual-factor fusion framework
 
 ---
 
