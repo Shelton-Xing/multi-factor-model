@@ -1,0 +1,19 @@
+{
+  "oos_ic_mean": 0.028271546629555663,
+  "oos_ic_t_stat": 2.2905704690627053,
+  "oos_ic_n_dates": 82,
+  "best_holding": 3,
+  "backtest": {
+    "total_ret": 0.04012910900903388,
+    "ann_ret": 0.12528298492237022,
+    "sharpe": 0.9905469800188571,
+    "max_dd": -0.047448540057244526,
+    "win_rate": 0.39285714285714285,
+    "n_periods": 28
+  },
+  "feature_importance": {
+    "sdl": 707.5,
+    "mom_z": 820.0,
+    "rev_z": 699.0
+  }
+}
